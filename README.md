@@ -1,4 +1,4 @@
-# CppND-System-Monitor
+# C++ System Monitor
 
 Starter code for System Monitor Project in the Object Oriented Programming Course of the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). 
 
@@ -6,19 +6,16 @@ Follow along with the classroom lesson to complete the project!
 
 ![System Monitor](images/monitor.png)
 
-## Udacity Linux Workspace
-[Udacity](https://www.udacity.com/) provides a browser-based Linux [Workspace](https://engineering.udacity.com/creating-a-gpu-enhanced-virtual-desktop-for-udacity-497bdd91a505) for students. 
-
-You are welcome to develop this project on your local machine, and you are not required to use the Udacity Workspace. However, the Workspace provides a convenient and consistent Linux development environment we encourage you to try.
+his project on your local machine, and you are not required to use the Udacity Workspace. However, the Workspace provides a convenient and consistent Linux development environment we encourage you to try.
 
 ## ncurses
+
 [ncurses](https://www.gnu.org/software/ncurses/) is a library that facilitates text-based graphical output in the terminal. This project relies on ncurses for display output.
 
-Within the Udacity Workspace, `.student_bashrc` automatically installs ncurses every time you launch the Workspace.
-
-If you are not using the Workspace, install ncurses within your own Linux environment: `sudo apt install libncurses5-dev libncursesw5-dev`
+Install ncurses within your own Linux environment: `sudo apt install libncurses5-dev libncursesw5-dev`
 
 ## Make
+
 This project uses [Make](https://www.gnu.org/software/make/). The Makefile has four targets:
 * `build` compiles the source code and generates an executable
 * `format` applies [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) to style the source code
@@ -27,7 +24,7 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 
 ## Instructions
 
-1. Clone the project repository: `git clone https://github.com/udacity/CppND-System-Monitor-Project-Updated.git`
+1. Clone the project repository: `git clone https://github.com/wambitz/system-monitor-devcontainer.git`
 
 2. Build the project: `make build`
 
@@ -39,3 +36,13 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 5. Implement the `System`, `Process`, and `Processor` classes, as well as functions within the `LinuxParser` namespace.
 
 6. Submit!
+
+## Dev Container support (optional)
+
+This repo includes a `.devcontainer/devcontainer.json` for [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) and [GitHub Codespaces](https://docs.github.com/en/codespaces).  
+**You do not need to use this file unless you want to develop in a containerized environment.**
+
+## VS Code configuration (optional)
+
+This repo provides `.vscode/tasks.json` and `.vscode/launch.json` for a richer development & debugging experience with [Visual Studio Code](https://code.visualstudio.com/).  
+**These files are optional and only affect VS Code users.**
