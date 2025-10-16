@@ -1,0 +1,41 @@
+{
+  "name": "System Monitor DevContainer",
+  "image": "system-monitor-dev:latest",
+
+  // Build image before starting container
+  "initializeCommand": "bash ${localWorkspaceFolder}/scripts/build_image.sh",
+
+  // Pass host UID/GID to container for runtime remapping
+  "containerEnv": {
+    "HOST_UID": "${localEnv:UID}",
+    "HOST_GID": "${localEnv:GID}"
+  },
+
+  // Start container as root to allow entrypoint to remap UID/GID
+  "containerUser": "root",
+  // VS Code will connect as ubuntu user (with remapped UID/GID)
+  "remoteUser": "ubuntu",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "bash",
+        "editor.formatOnSave": true,
+        "C_Cpp.default.cppStandard": "c++17"
+      },
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools"
+      ]
+    }
+  },
+
+  "postStartCommand": "bash",
+
+  // Clean container name and setup
+  "runArgs": [
+    "--rm",
+    "--hostname", "system-monitor-devcontainer",
+    "--name", "system-monitor-dev-${localEnv:USER}"
+  ]
+}

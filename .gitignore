@@ -1,7 +1,7 @@
-monitor
-a.out
-settings.json
-*.o
-build/*
-*.json
-.github/**
+# Build
+build/
+
+# .gitignore example to keep only tasks and launch configs tracked
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
