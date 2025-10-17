@@ -1,5 +1,5 @@
 {
-  "name": "System Monitor DevContainer",
+  "name": "System Monitor",
   "image": "system-monitor-dev:latest",
 
   // Build image before starting container
@@ -15,6 +15,10 @@
   "containerUser": "root",
   // VS Code will connect as ubuntu user (with remapped UID/GID)
   "remoteUser": "ubuntu",
+
+  // IMPORTANT: Prevent VS Code from creating a derived "vsc-...-uid" image
+  // We handle UID/GID remapping at runtime via our ENTRYPOINT script
+  "updateRemoteUserUID": false,
 
   "customizations": {
     "vscode": {

@@ -26,6 +26,10 @@
             "type": "shell",
             "command": "rm",
             "args": ["-rf", "build"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "problemMatcher": []
         }
     ]
